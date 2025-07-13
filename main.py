@@ -39,3 +39,7 @@ transformed_df = people_df.select(
 
 # Show the DataFrame
 transformed_df.show()
+
+# count the number of rows of the trnsformed DataFrame
+
+print("The number of rows:",transformed_df.count())

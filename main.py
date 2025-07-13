@@ -26,5 +26,16 @@ people_df = spark.read.format("csv")\
     .load("data/people.csv")
 
 
+
+# show all transformations
+transformed_df = people_df.select(
+    people_df.UserId,
+    people_df.Name,
+    people_df.Age,
+    people_df.Number_of_friends
+).where(people_df.Age > 20)\
+ .withColumn("insert_ts", func.current_timestamp())\
+ .orderBy(people_df.UserId)
+
 # Show the DataFrame
-people_df.show()
+transformed_df.show()

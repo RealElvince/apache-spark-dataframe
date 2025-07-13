@@ -22,4 +22,5 @@ columns = ["FirstName","LastName","DOB","Gender","Salary"]
 
 df = spark.createDataFrame(data=data,schema=columns)
 
+df.show()
 print(df.printSchema())

@@ -46,3 +46,8 @@ print("The number of rows:",transformed_df.count())
 
 # create temporary view
 transformed_df.createOrReplaceTempView("people_view")
+
+# run SQL query
+sql_query = spark.sql("SELECT UserId,Name,Age,insert_ts FROM people_view")
+# Show the result of the SQL query
+sql_query.show()

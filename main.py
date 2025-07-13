@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 import pyspark.sql.functions as func
 
-
+# spark session
 spark = SparkSession.builder\
         .master("local")\
         .appName("MySparkApp2")\

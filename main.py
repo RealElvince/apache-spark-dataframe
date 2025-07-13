@@ -44,3 +44,5 @@ transformed_df.show()
 
 print("The number of rows:",transformed_df.count())
 
+# create temporary view
+transformed_df.createOrReplaceTempView("people_view")
